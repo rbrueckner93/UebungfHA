@@ -15,10 +15,7 @@ public class Student extends Person{
 		return matrikelnummer;
 	}
 	
-	public String getTextDarstellung() {
-		String textOberklasse = super.getTextDarstellung();
-		return textOberklasse + ", Matrikelnummer " + matrikelnummer;
-	}
+
 	
 	public void besucheVorlesung() {
 		Random r = new Random();

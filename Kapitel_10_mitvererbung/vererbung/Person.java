@@ -12,10 +12,7 @@ public class Person {
 		this.alter = alter;
 	}
 
-	public String getTextDarstellung() {
-		// "Fritz Musterkind (7)"
-		return vorname + " " + nachname + " (" + alter + ")";
-	}
+	
 
 	public int getAlter() {
 		return alter;
