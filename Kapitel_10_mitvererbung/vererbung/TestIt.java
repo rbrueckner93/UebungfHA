@@ -18,6 +18,7 @@ public class TestIt {
 		System.out.println(s.getTextDarstellung());
 		s.besucheVorlesung();
 		
+		
 	}
 	
 
