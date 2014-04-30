@@ -13,14 +13,14 @@ public class Dozent extends Person{
 		return fachbereich;
 	}
 
+	
+	//Eine Änderung in git ist super verfolgbar.
 	public void halteVorlesung() {
 		System.out.println("...Vererbung erlaubt Eigenschaften und Methoden weiter zu geben...");
 		System.out.println("...beispielsweise soll eine Klasse Student und eine Klasse Dozent erstellt werden...");
 		System.out.println("...beide Klassen besitzen gemeinsame Eigenschaften...");
 	}
 	
-	public String getTextDarstellung() {
-		String textOberklasse = super.getTextDarstellung();
-		return textOberklasse + ", Fachbereich " + fachbereich;
-	}
+	
+	
 }
