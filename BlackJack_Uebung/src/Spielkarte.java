@@ -88,6 +88,24 @@ public class Spielkarte {
   public boolean istAss() {
 	  return getBezeichnung().equals(BEZEICHNUNG_ASS);
 	  }
-	  
-  }
+  public int getIntWert(){
+	  switch(getBezeichnung()){
+	  case BEZEICHNUNG_ZWEI:return 2;
+	  case BEZEICHNUNG_DREI:return 3; 
+	  case BEZEICHNUNG_VIER:return 4; 
+	  case BEZEICHNUNG_FUENF:return 5; 
+	  case BEZEICHNUNG_SECHS:return 6; 
+	  case BEZEICHNUNG_SIEBEN:return 7; 
+	  case BEZEICHNUNG_ACHT:return 8; 
+	  case BEZEICHNUNG_NEUN:return 9; 
+	  case BEZEICHNUNG_ZEHN:return 10; 
+	  case BEZEICHNUNG_BUBE:return 10; 
+	  case BEZEICHNUNG_DAME:return 10; 
+	  case BEZEICHNUNG_KOENIG:return 10; 
+	  case BEZEICHNUNG_ASS:return 11; 
+	  default: return 0;
+	    }
+	  }
+  	}
+
 
