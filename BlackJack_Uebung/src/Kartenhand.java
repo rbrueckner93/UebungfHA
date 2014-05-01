@@ -1,11 +1,10 @@
-import java.util.Vector;
 
 public class Kartenhand {
 
-  public null hand array;
-
-    public Vector  my;
-    public Vector  my;
+  public Spielkarte[] Kartenhand(){
+	  Spielkarte[] spielHand = new Spielkarte[52];
+	  return spielHand;
+  }		
 
   /** 
    *  Fordert eine au Stapel und schreibt sie in hand array
