@@ -1,6 +1,6 @@
 public class Spieltisch {
 
-  public Integer zielWertHand;
+  public final Integer zielWertHand = 21;
 
   /** 
    *  Wertet die Hände nach geltenden BlackJack Regeln aus. Auswertung nach Anzahl der Asse.
