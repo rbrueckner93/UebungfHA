@@ -1,21 +1,29 @@
-
 public class Kartenhand {
 
-  public Spielkarte[] Kartenhand(){
-	  Spielkarte[] spielHand = new Spielkarte[52];
-	  return spielHand;
-  }		
+/*
+ * @@author Nils
+ * @return Array mit Spielkarten. 
+ *
+ */
+  public Spielkarte[] spielHand;
+  		
 
-  /** 
-   *  Fordert eine au Stapel und schreibt sie in hand array
+  private Kartenhand() {
+	spielHand = new Spielkarte[(Spielkarte.erzeugeMoeglicheBezeichnungen().length*Spielkarte.erzeugeMoeglicheFarben().length)-1];
+}
+
+/** 
+   *  Fordert eine aus Stapel und schreibt sie in hand array
    */
   public void karteNehmen() {
+	  
   }
 
   /** 
    *  Wertet das Handarray nach realen Werten aus(Ass=11)
    */
   public void auswertungRealwert() {
+	  for (int i <= 51; )
   }
 
   /** 
