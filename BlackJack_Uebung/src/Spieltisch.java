@@ -13,6 +13,7 @@ public class Spieltisch {
    *  Begrüßung des Spielers und erstellen der notwendigen Objekte(Stapel,Spielerhand,Dealerhand) automatisches Ziehen der ersten Spielkarte
    */
   public void begruessung() {
+  System.out.println("Willkommen bei BlackJack with Java!");
   }
 
   /** 
