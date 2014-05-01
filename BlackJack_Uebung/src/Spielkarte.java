@@ -4,38 +4,90 @@ public class Spielkarte {
 
   public String bezeichnung;
 
-  /** 
-   *  Array mit erkaubten Farben
-   */
-  public null möglicheFarben array final;
+  private static final String BEZEICHNUNG_ASS = "Ass"; 
+	private static final String BEZEICHNUNG_ZWEI = "Zwei";
+	private static final String BEZEICHNUNG_DREI = "Drei";
+	private static final String BEZEICHNUNG_VIER = "Vier";
+	private static final String BEZEICHNUNG_FUENF = "Fünf";
+	private static final String BEZEICHNUNG_SECHS = "Sechs";
+	private static final String BEZEICHNUNG_SIEBEN = "Sieben";
+	private static final String BEZEICHNUNG_ACHT = "Acht";
+	private static final String BEZEICHNUNG_NEUN = "Neun";
+	private static final String BEZEICHNUNG_ZEHN = "Zehn";
+	private static final String BEZEICHNUNG_BUBE = "Bube";
+	private static final String BEZEICHNUNG_DAME = "Dame";
+	private static final String BEZEICHNUNG_KOENIG = "König";
+	
+	private static final String FARBE_KARO = "Karo";
+	private static final String FARBE_HERZ = "Herz";
+	private static final String FARBE_PIK = "Pik";
+	private static final String FARBE_KREUZ = "Kreuz";
+   
+  public Spielkarte(String farbe, String bezeichnung) {
+		super();
+		this.farbe = farbe;
+		this.bezeichnung = bezeichnung;
+  
+  }
+  
 
-  /** 
-   *  Array mit erlaubten Bezeichnungen
-   */
-  private null möglicheBezeichnungen array final;
+  public static String[] erzeugeMoeglicheFarben(){
+	  String[] moeglicheFarben = new String[3];
+	  	moeglicheFarben[0] = FARBE_KARO;
+	  	moeglicheFarben[1] = FARBE_HERZ;
+	  	moeglicheFarben[2] = FARBE_PIK;
+	  	moeglicheFarben[3] = FARBE_KREUZ;
+	  	return moeglicheFarben;
+  }
+  
+  public static String[] erzeugeMoeglicheBezeichnungen(){
+	  String[] moeglicheBezeichnungen = new String[12];
+	  	moeglicheBezeichnungen[0] = BEZEICHNUNG_ASS;
+	  	moeglicheBezeichnungen[1] = BEZEICHNUNG_ZWEI;
+	  	moeglicheBezeichnungen[2] = BEZEICHNUNG_DREI;
+	  	moeglicheBezeichnungen[3] = BEZEICHNUNG_VIER;
+	  	moeglicheBezeichnungen[4] = BEZEICHNUNG_FUENF;
+	  	moeglicheBezeichnungen[5] = BEZEICHNUNG_SECHS;
+	  	moeglicheBezeichnungen[6] = BEZEICHNUNG_SIEBEN;
+	  	moeglicheBezeichnungen[7] = BEZEICHNUNG_ACHT;
+	  	moeglicheBezeichnungen[8] = BEZEICHNUNG_NEUN;
+	  	moeglicheBezeichnungen[9] = BEZEICHNUNG_ZEHN;
+	  	moeglicheBezeichnungen[10] = BEZEICHNUNG_BUBE;
+	  	moeglicheBezeichnungen[11] = BEZEICHNUNG_DAME;
+	  	moeglicheBezeichnungen[12]= BEZEICHNUNG_KOENIG;
+	  return moeglicheBezeichnungen;
+  }
+ 
 
-  /** 
+  
+
+/** 
    *  Gibt die farbe wieder
    */
-  public getfarbe() {
+  public String getfarbe() {
+	  return farbe;
   }
 
   /** 
    *  Gibt die bezeichnung wieder
    */
-  public void getBezeichnung() {
+  public String getBezeichnung() {
+	  return bezeichnung;
   }
 
   /** 
    *  Gibt einen String aus Farbe+bezeichnung zurück
    */
-  public void getTextdarstellung() {
+  public String getTextdarstellung() {
+	  return farbe+bezeichnung;
   }
 
   /** 
    *  Gibt true zurück, wenn Karte ein Ass ist
    */
-  public void istAss() {
+  public boolean istAss() {
+	  return getBezeichnung().equals(BEZEICHNUNG_ASS);
+	  }
+	  
   }
 
-}
