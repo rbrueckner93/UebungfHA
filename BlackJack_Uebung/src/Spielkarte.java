@@ -7,12 +7,12 @@ public class Spielkarte {
   /** 
    *  Array mit erkaubten Farben
    */
-  public null möglicheFarben array final;
+  String[] moeglicheFarben = new String[5];
 
   /** 
    *  Array mit erlaubten Bezeichnungen
    */
-  private null möglicheBezeichnungen array final;
+  private null moeglicheBezeichnungen array final;
 
   /** 
    *  Gibt die farbe wieder
