@@ -79,7 +79,7 @@ public class Spielkarte {
    *  Gibt einen String aus Farbe+bezeichnung zurück
    */
   public String getTextdarstellung() {
-	  return farbe+bezeichnung;
+	  return farbe+" "+bezeichnung;
   }
 
   /** 
