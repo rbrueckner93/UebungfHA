@@ -14,8 +14,8 @@ public class Spieltisch {
    */
   public void begruessung() {
   System.out.println("Willkommen bei BlackJack with Java!");
-  //p = new Kartenhand();
-  
+  Kartenhand Spielerhand = new Kartenhand();
+  System.out.println("Wir haben auch schon eine Kartenhand generiert.");
   }
 
   /** 
@@ -23,10 +23,11 @@ public class Spieltisch {
    *  Zeigt Aktuelle Kartenhand an + Aktuellen Handwert
    *  Fenster, das Möglichkeit zur Auswahl gibt. Liefert true oder false zurück.
    */
-  //public integer spielerAuswertung = 5;
+  
   public void willstDuKarte() {
-	  
-	  if (5 < zielWertHand) {
+	  int spielerAuswertung;
+	  spielerAuswertung = 5; // 
+	  if (spielerAuswertung < zielWertHand) {
 		//getTextdarstellung Kartenhand Spieler
 		System.out.println("Möglich. TODO: Danach Fragen, ob er neue Karte will");
 	} else {
