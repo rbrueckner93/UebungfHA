@@ -24,7 +24,6 @@ public class Spielkarte {
 	private static final String FARBE_KREUZ = "Kreuz";
 
 	public Spielkarte(String farbe, String bezeichnung) {
-		super();
 		this.farbe = farbe;
 		this.bezeichnung = bezeichnung;
 
@@ -42,6 +41,7 @@ public class Spielkarte {
 		moeglicheFarben[3] = FARBE_KREUZ;
 		return moeglicheFarben;
 	}
+
 	/**
 	 * Array mit erlaubten Bezeichnungen
 	 */
