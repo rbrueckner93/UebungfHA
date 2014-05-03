@@ -3,18 +3,22 @@ public class Kartenstapel {
   /** 
    *  Gibt Position im array an, an der sich die aktuell oberste Karte des laufenden Spiels befindet
    */
-  public int obersteKarte = 51;
- 
- int stapelgroesse = 52-1; // in Zukunft: anzahl farben*anzahl zahlen
- Spielkarte[] stapel = new Spielkarte[stapelgroesse];
+  public Integer obersteKarte = 51;
+
+  public Spielkarte[] stapel;
 
  
  //stapel = new String[];
   /** 
    *  Erzeugt ein Array der Länge Farbe*Bezeichnungen und schreibt Spielkarten anhand möglicher farben,bezeichnungen in das array
    */
-  public void erzeugeKartenstapel() {
-  }
+ private Kartenstapel(){
+	 stapel = new Spielkarte[52];
+	 
+	 
+	 }
+	 
+ }
 
   /** 
    *  Schleife, die über Klasse Random 2 Spielkarten im array findet und diese in eigene variablen abspeichert und sie über Kreuz im Stapelarray abspeichert.

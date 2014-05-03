@@ -1,22 +1,29 @@
-import java.util.Vector;
-
 public class Kartenhand {
 
-  public null hand array;
+/*
+ * @@author Nils
+ * @return Array mit Spielkarten. 
+ *
+ */
+  public Spielkarte[] spielHand;
+  		
 
-    public Vector  my;
-    public Vector  my;
+  private Kartenhand() {
+	spielHand = new Spielkarte[(Spielkarte.erzeugeMoeglicheBezeichnungen().length*Spielkarte.erzeugeMoeglicheFarben().length)-1];
+}
 
-  /** 
-   *  Fordert eine au Stapel und schreibt sie in hand array
+/** 
+   *  Fordert eine aus Stapel und schreibt sie in hand array
    */
   public void karteNehmen() {
+	  
   }
 
   /** 
    *  Wertet das Handarray nach realen Werten aus(Ass=11)
    */
   public void auswertungRealwert() {
+	  for (int i <= 51; )
   }
 
   /** 
