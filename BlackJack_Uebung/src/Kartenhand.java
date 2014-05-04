@@ -37,7 +37,7 @@ public class Kartenhand {
 	 */
 	public String handAnzeigen() {
 		String Kartentext = null;
-		for (int laeufer = 0; laeufer < kartenAufHand; laeufer++) {
+		for (int laeufer = 0; laeufer <= kartenAufHand; laeufer++) {
 			Spielkarte Karte = spielHand[laeufer];
 			Kartentext = Kartentext + " " + Karte.getTextdarstellung();
 		}
@@ -50,7 +50,7 @@ public class Kartenhand {
 		int mitAssWert = 0;
 		int optimalWert = 0;
 		int anzahlAsse = 0;
-		for (int laeufer = 0; laeufer < kartenAufHand; laeufer++) {
+		for (int laeufer = 0; laeufer <= kartenAufHand; laeufer++) {
 			mitAssWert += spielHand[laeufer].getIntWert();
 			if (spielHand[laeufer].istAss()) {
 				anzahlAsse++;
