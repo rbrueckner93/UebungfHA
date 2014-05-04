@@ -40,7 +40,7 @@ public class Spielkarte {
 	 */
 
 	public static String[] erzeugeMoeglicheFarben() {
-		String[] moeglicheFarben = new String[3];
+		String[] moeglicheFarben = new String[4];
 		moeglicheFarben[0] = FARBE_KARO;
 		moeglicheFarben[1] = FARBE_HERZ;
 		moeglicheFarben[2] = FARBE_PIK;
@@ -51,7 +51,7 @@ public class Spielkarte {
 	 * Array mit erlaubten Bezeichnungen
 	 */
 	public static String[] erzeugeMoeglicheBezeichnungen() {
-		String[] moeglicheBezeichnungen = new String[12];
+		String[] moeglicheBezeichnungen = new String[13];
 		moeglicheBezeichnungen[0] = BEZEICHNUNG_ASS;
 		moeglicheBezeichnungen[1] = BEZEICHNUNG_ZWEI;
 		moeglicheBezeichnungen[2] = BEZEICHNUNG_DREI;

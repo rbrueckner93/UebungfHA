@@ -1,9 +1,12 @@
 package blackJackUeb;
 
-import blackJackUeb.*;
-
+import blackJackUeb.Kartenhand;
 
 public class Spieltisch {
+
+	public static void main(String args[]) {
+		blackJackUeb.Spieltisch.begruessung();
+	}
 
 	public final Integer zielWertHand = 21;
 
@@ -18,17 +21,19 @@ public class Spieltisch {
 	 * Begrï¿½ï¿½ung des Spielers und erstellen der notwendigen
 	 * Objekte(Stapel,Spielerhand,Dealerhand) automatisches Ziehen der ersten
 	 * Spielkarte
+	 * 
+	 * @return
 	 */
-	public void begruessung() {
+	public static void begruessung() {
 		System.out.println("Willkommen bei BlackJack with Java!");
-		Kartenhand spielerhand = new Kartenhand();
+		blackJackUeb.Kartenhand spielerhand = new blackJackUeb.Kartenhand();
 		System.out.println("Wir haben auch schon eine Kartenhand generiert.");
 	}
 
 	/**
 	 * auswertungSpiel() checkt, ob Spiel fortzusetzten ist Zeigt Aktuelle
-	 * Kartenhand an + Aktuellen Handwert Fenster, das Mï¿½glichkeit zur Auswahl
-	 * gibt. Liefert true oder false zurï¿½ck.
+	 * Kartenhand an + Aktuellen Handwert Fenster, das Moeglichkeit zur Auswahl
+	 * gibt. Liefert true oder false zurueck.
 	 */
 
 	public void willstDuKarte() {
@@ -36,10 +41,9 @@ public class Spieltisch {
 		spielerAuswertung = 5; //
 		if (spielerAuswertung < zielWertHand) {
 			// getTextdarstellung Kartenhand Spieler
-			System.out
-					.println("Mï¿½glich. TODO: Danach Fragen, ob er neue Karte will");
+			System.out.println("Moeglich. TODO: Danach Fragen, ob er neue Karte will");
 		} else {
-			System.out.println("Nicht mï¿½glich");
+			System.out.println("Nicht mïoeglich");
 		}
 
 	}
@@ -49,7 +53,7 @@ public class Spieltisch {
 	 */
 	public void spielBeenden() {
 		auswertungSpiel();
-		System.out.println("Mï¿½chtest du nochmal?");
+		System.out.println("Moechtest du nochmal?");
 		// hier fragen mit Dialogbox
 		// erstmal wird nur beendet
 		System.exit(0);
