@@ -37,8 +37,8 @@ public class Kartenstapel {
 	public void mischen() {
 		Random generator = new Random();
 		for (int mischer = 1; mischer <= 1000; mischer++) {
-			int pos1 = generator.nextInt(51);
-			int pos2 = generator.nextInt(51);
+			int pos1 = generator.nextInt(52);
+			int pos2 = generator.nextInt(52);
 			Spielkarte eins = stapel[pos1];
 			Spielkarte zwei = stapel[pos2];
 			stapel[pos2] = eins;
@@ -58,5 +58,10 @@ public class Kartenstapel {
 		obersteKarte = obersteKarte -1;
 		return neueKarte;
 	}
-
+	public void Debug(){
+		for (Spielkarte karte : stapel) {
+			System.out.println(karte.getTextdarstellung());
+		}
+	}
+	
 }

@@ -8,8 +8,8 @@ public class Kartenhand {
 	public static final int blackJack = 21;
 
 	public Kartenhand() {
-		spielHand = new Spielkarte[(Spielkarte.erzeugeMoeglicheBezeichnungen().length * Spielkarte
-				.erzeugeMoeglicheFarben().length) - 1];
+		spielHand = new Spielkarte[Spielkarte.erzeugeMoeglicheBezeichnungen().length
+				* Spielkarte.erzeugeMoeglicheFarben().length];
 	}
 
 	/**
@@ -26,8 +26,8 @@ public class Kartenhand {
 	 */
 	public int auswertungRealwert() {
 		int HandWertReal = 0;
-		for (Spielkarte karte : spielHand) {
-			HandWertReal += karte.getIntWert();
+		for (int i = 0; i < kartenAufHand; i++) {
+			HandWertReal = HandWertReal + spielHand[i].getIntWert();
 		}
 		return HandWertReal;
 	}
@@ -36,21 +36,21 @@ public class Kartenhand {
 	 * textdarstellung aller Karten auf der Hand
 	 */
 	public String handAnzeigen() {
-		String Kartentext = null;
-		for (int laeufer = 0; laeufer <= kartenAufHand; laeufer++) {
-			Spielkarte Karte = spielHand[laeufer];
-			Kartentext = Kartentext + " " + Karte.getTextdarstellung();
+		String text = spielHand[0].getTextdarstellung();
+		for (int i = 1; i < kartenAufHand; i++) {
+			text = text + " " + spielHand[i].getTextdarstellung();
 		}
-		return Kartentext;
+		return text;
 	}
 
 	public int getOptimalenWert() {
+		int workaround = 0;
 		int letzterWert = 0;
 		int ohneAssWert = 0;
 		int mitAssWert = 0;
 		int optimalWert = 0;
 		int anzahlAsse = 0;
-		for (int laeufer = 0; laeufer <= kartenAufHand; laeufer++) {
+		for (int laeufer = 0; laeufer < kartenAufHand; laeufer++) {
 			mitAssWert += spielHand[laeufer].getIntWert();
 			if (spielHand[laeufer].istAss()) {
 				anzahlAsse++;
@@ -58,7 +58,7 @@ public class Kartenhand {
 		}
 		if (anzahlAsse != 0) {
 			ohneAssWert = mitAssWert - (anzahlAsse * 11);
-			int[] handWerte = new int[(kartenAufHand - 1)];
+			int[] handWerte = new int[(anzahlAsse + 1)];
 			for (int i = 0; i <= anzahlAsse; i++) {
 				int asseMitelf = i;
 				int asseMiteins = anzahlAsse - i;
@@ -66,11 +66,12 @@ public class Kartenhand {
 						+ (asseMitelf * 11);
 			}
 			for (int auswerteWert : handWerte) {
-				if (auswerteWert <= blackJack && auswerteWert >= mitAssWert
-						&& auswerteWert >= letzterWert) {
+				if (auswerteWert <= blackJack && auswerteWert >= letzterWert) {
 					letzterWert = auswerteWert;
 					optimalWert = auswerteWert;
-				} else {
+					workaround++;
+				}
+				if (workaround == 0) {
 					optimalWert = mitAssWert;
 				}
 			}
@@ -78,5 +79,11 @@ public class Kartenhand {
 			optimalWert = mitAssWert;
 		}
 		return optimalWert;
+	}
+
+	public void Debug() {
+		for (Spielkarte Karte : spielHand) {
+			System.out.println(Karte.getTextdarstellung());
+		}
 	}
 }
