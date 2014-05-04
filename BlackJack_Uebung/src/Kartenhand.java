@@ -66,8 +66,8 @@ public class Kartenhand {
 						+ (asseMitelf * 11);
 			}
 			for (int auswerteWert : handWerte) {
-				if (auswerteWert <= 21 && auswerteWert > mitAssWert
-						&& auswerteWert > letzterWert) {
+				if (auswerteWert <= 21 && auswerteWert >= mitAssWert
+						&& auswerteWert >= letzterWert) {
 					letzterWert = auswerteWert;
 					optimalWert = auswerteWert;
 				} else {
