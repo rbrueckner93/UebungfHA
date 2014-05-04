@@ -1,19 +1,19 @@
 package blackJackUeb;
 
-import blackJackUeb.*;
+import blackJackUeb.Spielkarte;
 
 public class Kartenhand {
 
 	/*
 	 * 
 	 */
-	public Spielkarte[] spielHand;
-	public int kartenAufHand = 0;
+	public static Spielkarte[] spielHand;
+	public static int kartenAufHand = 0;
 	public static final int blackJack = 21;
 
-	public Kartenhand() {
-		spielHand = new Spielkarte[(Spielkarte.erzeugeMoeglicheBezeichnungen().length * Spielkarte
-				.erzeugeMoeglicheFarben().length) - 1];
+	public static void kartenhandErstellen() {
+		spielHand = new Spielkarte[((Spielkarte.erzeugeMoeglicheBezeichnungen().length )*( Spielkarte
+				.erzeugeMoeglicheFarben().length))];
 	}
 
 	/**
@@ -39,8 +39,8 @@ public class Kartenhand {
 	/**
 	 * textdarstellung aller Karten auf der Hand
 	 */
-	public String handAnzeigen() {
-		String Kartentext = null;
+	public static String handAnzeigen() {
+		String Kartentext = "";
 		for (int laeufer = 0; laeufer <= kartenAufHand; laeufer++) {
 			Spielkarte Karte = spielHand[laeufer];
 			Kartentext = Kartentext + " " + Karte.getTextdarstellung();

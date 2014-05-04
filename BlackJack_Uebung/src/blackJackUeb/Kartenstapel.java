@@ -1,7 +1,7 @@
 package blackJackUeb;
 
 import java.util.Random;
-import blackJackUeb.*;
+import blackJackUeb.Spielkarte;
 
 public class Kartenstapel {
 
@@ -10,15 +10,15 @@ public class Kartenstapel {
 	 * Gibt Position im array an, an der sich die aktuell oberste Karte des
 	 * laufenden Spiels befindet
 	 */
-	public int obersteKarte = 51;
+	public static int obersteKarte = 51;
 
-	public Spielkarte[] stapel;
+	public static Spielkarte[] stapel;
 
 	/**
 	 * Erzeugt ein Array der Länge Farbe*Bezeichnungen und schreibt Spielkarten
 	 * anhand möglicher farben,bezeichnungen in das array
 	 */
-	public Kartenstapel() {
+	public static void kartenstapelErstellen() {
 		stapel = new blackJackUeb.Spielkarte[52];
 		String[] farben = blackJackUeb.Spielkarte.erzeugeMoeglicheFarben();
 		String[] bezeichnungen = blackJackUeb.Spielkarte.erzeugeMoeglicheBezeichnungen();
@@ -38,7 +38,7 @@ public class Kartenstapel {
 	 * in eigene variablen abspeichert und sie über Kreuz im Stapelarray
 	 * abspeichert. Nach Abschluss mischen() obersterKarte zurücksetzten.
 	 */
-	public void mischen() {
+	public static void mischen() {
 		Random generator = new Random();
 		for (int mischer = 1; mischer <= 1000; mischer++) {
 			int pos1 = generator.nextInt(51);

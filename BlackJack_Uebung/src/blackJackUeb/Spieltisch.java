@@ -26,10 +26,10 @@ public class Spieltisch {
 	 */
 	public static void begruessung() {
 		System.out.println("Willkommen bei BlackJack with Java!");
-		blackJackUeb.Kartenhand spielerhand = new blackJackUeb.Kartenhand();
 		System.out.println("Wir haben auch schon eine Kartenhand generiert.");
-		blackJackUeb.Spieltisch.willstDuKarte();
-	}
+		blackJackUeb.Kartenstapel.kartenstapelErstellen();
+		blackJackUeb.Kartenstapel.mischen();
+		}
 
 	/**
 	 * auswertungSpiel() checkt, ob Spiel fortzusetzten ist Zeigt Aktuelle
