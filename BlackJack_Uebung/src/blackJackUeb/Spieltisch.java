@@ -1,3 +1,8 @@
+package blackJackUeb;
+
+import blackJackUeb.*;
+
+
 public class Spieltisch {
 
 	public final Integer zielWertHand = 21;

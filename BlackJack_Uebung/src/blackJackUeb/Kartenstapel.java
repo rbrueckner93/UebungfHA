@@ -1,4 +1,7 @@
+package blackJackUeb;
+
 import java.util.Random;
+import blackJackUeb.*;
 
 public class Kartenstapel {
 
@@ -16,13 +19,13 @@ public class Kartenstapel {
 	 * anhand möglicher farben,bezeichnungen in das array
 	 */
 	public Kartenstapel() {
-		stapel = new Spielkarte[52];
-		String[] farben = Spielkarte.erzeugeMoeglicheFarben();
-		String[] bezeichnungen = Spielkarte.erzeugeMoeglicheBezeichnungen();
+		stapel = new blackJackUeb.Spielkarte[52];
+		String[] farben = blackJackUeb.Spielkarte.erzeugeMoeglicheFarben();
+		String[] bezeichnungen = blackJackUeb.Spielkarte.erzeugeMoeglicheBezeichnungen();
 		int index = 0;
 		for (String farbe : farben) {
 			for (String bezeichnung : bezeichnungen) {
-				stapel[index] = new Spielkarte(farbe, bezeichnung);
+				stapel[index] = new blackJackUeb.Spielkarte(farbe, bezeichnung);
 				index++;
 			}
 
@@ -40,8 +43,8 @@ public class Kartenstapel {
 		for (int mischer = 1; mischer <= 1000; mischer++) {
 			int pos1 = generator.nextInt(51);
 			int pos2 = generator.nextInt(51);
-			Spielkarte eins = stapel[pos1];
-			Spielkarte zwei = stapel[pos2];
+			blackJackUeb.Spielkarte eins = stapel[pos1];
+			blackJackUeb.Spielkarte zwei = stapel[pos2];
 			stapel[pos2] = eins;
 			stapel[pos1] = zwei;
 		}

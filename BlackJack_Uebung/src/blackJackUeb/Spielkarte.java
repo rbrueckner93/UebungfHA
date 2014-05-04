@@ -1,3 +1,7 @@
+package blackJackUeb;
+
+import blackJackUeb.*;
+
 public class Spielkarte {
 
 
