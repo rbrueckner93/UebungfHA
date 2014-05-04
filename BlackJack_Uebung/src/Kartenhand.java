@@ -35,12 +35,10 @@ public class Kartenhand {
 	 * textdarstellung aller Karten auf der Hand
 	 */
 	public String handAnzeigen() {
-		String Kartentextaktuell = null;
 		String Kartentext = null;
-		for(int laeufer = 0; laeufer <= kartenAufHand;laeufer++){
+		for (int laeufer = 0; laeufer <= kartenAufHand; laeufer++) {
 			Spielkarte Karte = spielHand[laeufer];
-			Kartentextaktuell = Karte.getTextdarstellung();
-			Kartentext =  Kartentext + " " + Kartentextaktuell;
+			Kartentext = Kartentext + " " + Karte.getTextdarstellung();
 		}
 		return Kartentext;
 	}
