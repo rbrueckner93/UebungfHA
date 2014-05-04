@@ -8,7 +8,7 @@ public class Spieltisch {
 		blackJackUeb.Spieltisch.begruessung();
 	}
 
-	public final Integer zielWertHand = 21;
+	public static final Integer zielWertHand = 21;
 
 	/**
 	 * Wertet die H�nde nach geltenden BlackJack Regeln aus. Auswertung nach
@@ -28,6 +28,7 @@ public class Spieltisch {
 		System.out.println("Willkommen bei BlackJack with Java!");
 		blackJackUeb.Kartenhand spielerhand = new blackJackUeb.Kartenhand();
 		System.out.println("Wir haben auch schon eine Kartenhand generiert.");
+		blackJackUeb.Spieltisch.willstDuKarte();
 	}
 
 	/**
@@ -36,10 +37,10 @@ public class Spieltisch {
 	 * gibt. Liefert true oder false zurueck.
 	 */
 
-	public void willstDuKarte() {
+	public static void willstDuKarte() {
 		int spielerAuswertung;
 		spielerAuswertung = 5; //
-		if (spielerAuswertung < zielWertHand) {
+		if (spielerAuswertung < blackJackUeb.Spieltisch.zielWertHand) {
 			// getTextdarstellung Kartenhand Spieler
 			System.out.println("Moeglich. TODO: Danach Fragen, ob er neue Karte will");
 		} else {
