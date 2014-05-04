@@ -6,7 +6,7 @@ public class Kartenhand {
 	public Spielkarte[] spielHand;
 	public int kartenAufHand = 0;
 
-	private Kartenhand() {
+	public Kartenhand() {
 		spielHand = new Spielkarte[(Spielkarte.erzeugeMoeglicheBezeichnungen().length * Spielkarte
 				.erzeugeMoeglicheFarben().length) - 1];
 	}
@@ -39,7 +39,7 @@ public class Kartenhand {
 		for (int laeufer = 0; laeufer <= kartenAufHand; laeufer++) {
 			Spielkarte Karte = spielHand[laeufer];
 			Kartentext = Kartentext + " " + Karte.getTextdarstellung();
-		}
+		} 
 		return Kartentext;
 	}
 
