@@ -5,6 +5,7 @@ public class Kartenhand {
 	 */
 	public Spielkarte[] spielHand;
 	public int kartenAufHand = 0;
+	public static final int blackJack = 21;
 
 	public Kartenhand() {
 		spielHand = new Spielkarte[(Spielkarte.erzeugeMoeglicheBezeichnungen().length * Spielkarte
@@ -39,8 +40,43 @@ public class Kartenhand {
 		for (int laeufer = 0; laeufer <= kartenAufHand; laeufer++) {
 			Spielkarte Karte = spielHand[laeufer];
 			Kartentext = Kartentext + " " + Karte.getTextdarstellung();
-		} 
+		}
 		return Kartentext;
 	}
 
+	public int getOptimalenWert() {
+		int letzterWert = 0;
+		int ohneAssWert = 0;
+		int mitAssWert = 0;
+		int optimalWert = 0;
+		int anzahlAsse = 0;
+		for (int laeufer = 0; laeufer <= kartenAufHand; laeufer++) {
+			mitAssWert += spielHand[laeufer].getIntWert();
+			if (spielHand[laeufer].istAss()) {
+				anzahlAsse++;
+			}
+		}
+		if (anzahlAsse != 0) {
+			ohneAssWert = mitAssWert - (anzahlAsse * 11);
+			int[] handWerte = new int[(kartenAufHand - 1)];
+			for (int i = 0; i <= anzahlAsse; i++) {
+				int asseMitelf = i;
+				int asseMiteins = anzahlAsse - i;
+				handWerte[i] = ohneAssWert + (asseMiteins * 1)
+						+ (asseMitelf * 11);
+			}
+			for (int auswerteWert : handWerte) {
+				if (auswerteWert <= blackJack && auswerteWert >= mitAssWert
+						&& auswerteWert >= letzterWert) {
+					letzterWert = auswerteWert;
+					optimalWert = auswerteWert;
+				} else {
+					optimalWert = mitAssWert;
+				}
+			}
+		} else {
+			optimalWert = mitAssWert;
+		}
+		return optimalWert;
+	}
 }
