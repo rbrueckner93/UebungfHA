@@ -2,6 +2,7 @@ import java.util.Random;
 
 public class Kartenstapel {
 
+
 	/**
 	 * Gibt Position im array an, an der sich die aktuell oberste Karte des
 	 * laufenden Spiels befindet

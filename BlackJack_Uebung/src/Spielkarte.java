@@ -1,5 +1,6 @@
 public class Spielkarte {
 
+
 	public String farbe;
 
 	public String bezeichnung;
@@ -124,3 +125,4 @@ public class Spielkarte {
 		}
 	}
 }
+
