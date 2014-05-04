@@ -22,9 +22,11 @@ public class Spieltisch {
 				spieler.karteNehmen(spielstapel);
 				JOptionPane.showMessageDialog(null, spieler.handAnzeigen() + " || Spieler",
 						"Inane warning", JOptionPane.WARNING_MESSAGE);
+				
 				if (spieler.getOptimalenWert() > 21) {
 					JOptionPane.showMessageDialog(null, "Verloren",
 							"Inane warning", JOptionPane.WARNING_MESSAGE);
+				}
 				}
 				if (weiterSpielen == 1) {
 					int dealermaxwert = 17;
@@ -42,8 +44,6 @@ public class Spieltisch {
 								"Inane warning", JOptionPane.WARNING_MESSAGE);
 					}
 				}
-
-			}
 
 		} else {
 			System.exit(0);
