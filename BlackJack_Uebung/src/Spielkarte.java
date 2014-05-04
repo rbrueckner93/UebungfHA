@@ -93,7 +93,7 @@ public class Spielkarte {
 
 	public int getIntWert() {
 		switch (getBezeichnung()) {
-		case BEZEICHNUNG_ZWEI:
+		case BEZEICHNUNG_ZWEI: 
 			return 2;
 		case BEZEICHNUNG_DREI:
 			return 3;
