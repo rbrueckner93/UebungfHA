@@ -44,8 +44,6 @@ public class Kartenhand {
 	}
 
 	public int getOptimalenWert() {
-		int workaround = 0;
-		int letzterWert = 0;
 		int ohneAssWert = 0;
 		int mitAssWert = 0;
 		int optimalWert = 0;
@@ -66,16 +64,15 @@ public class Kartenhand {
 						+ (asseMitelf * 11);
 			}
 			for (int auswerteWert : handWerte) {
-				if (auswerteWert <= blackJack && auswerteWert >= letzterWert) {
-					letzterWert = auswerteWert;
+				if (auswerteWert <= blackJack && auswerteWert >= optimalWert) {
 					optimalWert = auswerteWert;
-					workaround++;
 				}
-				if (workaround == 0) {
+				if (optimalWert == 0) {
 					optimalWert = mitAssWert;
 				}
 			}
 		} else {
+			//Keine Asse gefunden
 			optimalWert = mitAssWert;
 		}
 		return optimalWert;
