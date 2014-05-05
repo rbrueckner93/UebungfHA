@@ -1,5 +1,7 @@
 package blackJackUeb;
 
+// Patrick 
+
 import blackJackUeb.Kartenhand;
 
 public class Spieltisch {
